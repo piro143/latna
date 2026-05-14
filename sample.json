@@ -1,0 +1,18 @@
+[
+  {
+    "title": "React Functional Component",
+    "code": "import React from 'react';\n\nconst MyComponent = ({ title }) => {\n  return (\n    <div>\n      <h1>{title}</h1>\n      <p>Hello World!</p>\n    </div>\n  );\n};\n\nexport default MyComponent;"
+  },
+  {
+    "title": "Center a Div (CSS)",
+    "code": ".parent {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n}"
+  },
+  {
+    "title": "Fetch API Example",
+    "code": "async function fetchData(url) {\n  try {\n    const response = await fetch(url);\n    if (!response.ok) {\n      throw new Error('Network response was not ok');\n    }\n    const data = await response.json();\n    return data;\n  } catch (error) {\n    console.error('Fetch error:', error);\n  }\n}"
+  },
+  {
+    "title": "Python List Comprehension",
+    "code": "# Create a list of squares for even numbers\nsquares = [x**2 for x in range(10) if x % 2 == 0]\nprint(squares)"
+  }
+]

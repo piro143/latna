@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Chits Vault</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-elements">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <!-- Top Navigation Strip -->
+    <nav class="top-nav glass-panel">
+        <button class="nav-tab active" data-category="sql">SQL</button>
+        <button class="nav-tab" data-category="plsql">PL/SQL</button>
+        <button class="nav-tab" data-category="mongodb">MongoDB</button>
+    </nav>
+
+    <div class="app-container layout-split">
+        <!-- Left Sidebar: Set Names -->
+        <aside class="sidebar glass-panel">
+            <h2 class="sidebar-title">Available Sets</h2>
+            <ul class="set-list" id="set-list">
+                <!-- Dynamically populated by JS -->
+            </ul>
+        </aside>
+
+        <!-- Main Content: Question and Solution Button -->
+        <main class="main-viewer glass-panel">
+            <div id="content-display" class="content-display" style="display: none;">
+                <div class="question-container">
+                    <h3 class="question-label">Question</h3>
+                    <p id="question-text"></p>
+                </div>
+                
+                <div class="solution-container">
+                    <button id="copy-solution-btn" class="big-solution-btn">
+                        <span class="btn-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        </span>
+                        <span class="btn-text">Copy Solution</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div id="empty-selection" class="empty-selection">
+                <p>Select a set from the left to view its question.</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="database.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
